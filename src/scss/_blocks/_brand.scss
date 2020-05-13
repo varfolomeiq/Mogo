@@ -1,0 +1,31 @@
+.brand {
+    display: flex;
+    margin-top: 110px;
+    background-color: #f8f8f8;
+    padding: 70px 0;
+    @include mediaWidthTablet {
+        padding: 45px 0;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        @include mediaWidthTablet {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        &:nth-child(5),
+        &:nth-child(6) {
+            @include mediaWidthTablet {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @include mediaWidthTablet {
+        margin-top: 60px;
+    }
+}

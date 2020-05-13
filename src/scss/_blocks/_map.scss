@@ -1,0 +1,39 @@
+.map {
+    background-image: url(../img/map.jpg);
+    background-color: #d9d9d9;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    &__icon {
+        color: #f38181;
+        font-size: 26px;
+        display: block;
+    }
+    &__link {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        color: #f38181;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        i {
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+}

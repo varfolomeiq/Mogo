@@ -1,0 +1,54 @@
+.section {
+    padding: 80px 0;
+    @include mediaWidthTablet {
+        padding: 60px 0;
+    }
+    &__header {
+        margin: 0 auto 90px;
+        text-align: center;
+        width: 100%;
+        max-width: 960px;
+        color: #333333;
+        @include mediaWidthTabletHorizontal {
+            margin: 0 auto 60px;
+        }
+        @include mediaWidthTablet {
+            margin: 0 auto 45px;
+        }
+    }
+    &__suptitle {
+        font-size: 24px;
+        font-family: "Kaushan Script";
+        font-weight: 400;
+    }
+    &__title {
+        font-family: "Roboto";
+        font-size: 30px;
+        font-weight: 700;
+        margin: 10px 0 75px;
+        text-transform: uppercase;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -35px;
+            transform: translateX(-50%);
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #f38181;
+            @include mediaWidthTablet {
+                bottom: -25px;
+            }
+        }
+        @include mediaWidthTablet {
+            margin: 10px 0 65px;
+        }
+    }
+    &__text {
+        color: #999999;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}

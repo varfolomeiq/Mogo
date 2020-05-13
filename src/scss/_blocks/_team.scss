@@ -1,0 +1,115 @@
+.team {
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 -15px;
+        @include mediaWidthTablet {
+            flex-direction: column;
+            max-width: 380px;
+            margin: 0 auto;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        padding: 0 15px;
+        @include mediaWidthTablet {
+            margin-bottom: 15px;
+            padding: 0;
+        }
+    }
+
+    &__inner {
+        background: #95e1d3;
+        position: relative;
+    }
+
+    &__inner:hover &__img img {
+        opacity: 0.1;
+    }
+
+    &__img {
+        background: linear-gradient(to bottom, #f38181, #fce38a);
+        transition: transform 0.2s linear;
+        &:hover {
+            transform: translate3d(-10px, -10px, 0);
+        }
+    }
+    &__photo {
+        display: block;
+        margin-bottom: 25px;
+        transition: opacity 0.2s linear;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        color: #333333;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    &__position {
+        font-family: "Roboto";
+        font-style: italic;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #999999;
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    z-index: 1;
+
+    &__item {
+        font-size: 26px;
+        color: #f38181;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        border-right: 1px solid #f38181;
+        background-color: #fce38a;
+        transition: all 0.3s 0s ease;
+        &:last-child {
+            border-right: 0;
+        }
+        &:hover {
+            background-color: #f38181;
+            color: #fce38a;
+        }
+    }
+}
+.fa-facebook-f,
+.fa-twitter,
+.fa-pinterest-p,
+.fa-instagram {
+    transition: all 0.3s 0s ease;
+}
+.team__inner:hover .social {
+    opacity: 1;
+}
+.social__item:hover .fa-facebook-f {
+    color: #fce38a;
+}
+
+.social__item:hover .fa-twitter {
+    color: #fce38a;
+}
+
+.social__item:hover .fa-pinterest-p {
+    color: #fce38a;
+}
+
+.social__item:hover .fa-instagram {
+    color: #fce38a;
+}

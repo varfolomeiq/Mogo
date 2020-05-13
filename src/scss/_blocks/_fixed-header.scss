@@ -1,0 +1,33 @@
+.fixed-header {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    background: transparent;
+    width: 100%;
+    z-index: 8;
+    background-color: white;
+    transform: translateY(-100%);
+    transform-origin: top;
+    transition: all 0.7s;
+    opacity: 0;
+    //height: 0;
+    height: fit-content;
+
+    &.scrolled {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fixed-header .header {
+    position: relative;
+    background-color: #d68486;
+}
+
+.fixed-header .logo {
+    opacity: 1;
+}
+
+.fixed-header .header__logo {
+    align-self: start;
+}

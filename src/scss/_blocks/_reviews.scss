@@ -1,0 +1,124 @@
+.reviews {
+    background: #f8f8f8;
+    position: relative;
+    min-height: 290px;
+    display: flex;
+    align-items: center;
+
+    &--second {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 130px;
+        @include mediaWidthTabletHorizontal {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 55px 15px 320px;
+        &--second {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+        @include mediaWidthTabletHorizontal {
+            padding: 40px 55px 40px 55px;
+        }
+        @include mediaWidthTablet {
+            padding: 40px 0;
+        }
+    }
+    &__photo {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 110px;
+        top: 15px;
+        z-index: 1;
+        @include mediaWidthTabletHorizontal {
+            position: static;
+            top: 0;
+            margin: 0 auto 15px;
+        }
+
+        &--second {
+            width: 210px;
+            height: 210px;
+            top: 0;
+            left: 80px;
+            @include mediaWidthTabletHorizontal {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    &__text {
+        font-family: "Roboto";
+        font-style: italic;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 300;
+        color: #999999;
+        margin-bottom: 10px;
+        @include mediaWidthTabletHorizontal {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        @include mediaWidthTablet {
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+    &__author {
+        font-family: "Kaushan Script";
+        font-size: 24px;
+        color: #333333;
+        padding-left: 70px;
+        position: relative;
+        @include mediaWidthTabletHorizontal {
+            font-size: 20px;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #f38181;
+
+            z-index: 1;
+        }
+    }
+}
+.swiper-button-next--cutom,
+.swiper-button-prev--cutom {
+    position: absolute;
+    border-top: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+}
+.swiper-button-next--cutom {
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    @include mediaWidthTabletHorizontal {
+        top: 31%;
+    }
+}
+
+.swiper-button-prev--cutom {
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-135deg);
+    @include mediaWidthTabletHorizontal {
+        top: 31%;
+    }
+}

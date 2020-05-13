@@ -1,0 +1,44 @@
+.section--devices {
+    background-image: url(../img/desing-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+}
+.devices {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    &__img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    @include mediaWidthTablet {
+        max-width: 350px;
+    }
+}
+.section__header--devices {
+    margin-top: 107px;
+    @include mediaWidthTabletHorizontal {
+        padding-top: 60px;
+        margin-top: 60px;
+    }
+    @include mediaWidthTablet {
+        margin-top: 45px;
+        padding-top: 45px;
+    }
+}
+.devices__img--iphone {
+    position: absolute;
+    bottom: -90px;
+    right: -95px;
+    z-index: 1;
+    @include mediaWidthTablet {
+        max-width: 200px;
+        bottom: -65px;
+        right: -115px;
+    }
+}
