@@ -85,3 +85,13 @@ body.lock {
 .swiper-slide.swiper-slide-active {
     width: 100% !important; // Убираем вертикальную белую полосу возле слайдера
 }
+.fixed-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.fixed-header:before,
+.fixed-header:after {
+    content: "";
+    display: table;
+}
